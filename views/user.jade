@@ -1,0 +1,58 @@
+//
+   Created by Dylan on 12/07/16.
+
+extends ../node_modules/jade-bootstrap/_bootstrap
+
+head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/current.css')
+    link(rel='stylesheet', href='/public/stylesheets/font-awesome.min.css')
+
+
+block body
+    +alert-success("You succesfully logged into your account")
+    div(class="container")
+        div(class="row text-center")
+            div(class="col md-4")
+                +panel-primary(userInfo.firstname + " " + userInfo.lastname)
+                    img(src='')
+                    span(class="glyphicon glyphicon-envelope", aria-hidden="true")
+                    if userInfo.emailaddresses.length
+                        p Email: #{userInfo.emailaddresses[0].emailaddress}
+                        br
+
+                    span(class="glyphicon glyphicon-home", aria-hidden="true")
+                    if userInfo.addresses.length
+                    p Country: #{userInfo.addresses[0].country}
+                    p City: #{userInfo.addresses[0].city}
+                    p Street: #{userInfo.addresses[0].street}
+                    p Nr: #{userInfo.addresses[0].nr}
+                    p Postalcode: #{userInfo.addresses[0].postalcode}
+                    br
+
+                    span(class="glyphicon glyphicon-earphone", aria-hidden="true")
+                    if userInfo.phonenumbers.length
+                    p Tel : #{userInfo.phonenumbers[0].phonenumber}
+                    br
+
+                    span(class="fa-facebook", aria-hidden="true")
+                    p Facebook : #{userInfo.facebook[0]}
+                    a(href=userInfo.facebook.link)
+                        img(class="img-rounded",src= userInfo.facebook.picture)
+                    br
+                    br
+                    span(class="fa-2x fa-github", aria-hidden="true")
+                    a(href=userInfo.github.html_url)
+                        i.fa.fa.fa-facebook
+                        p Github : #{userInfo.github.html_url}
+                    br
+
+                    span(class="fa-bank", aria-hidden="true")
+                    if userInfo.bankaccounts.length
+                        p Bank : #{userInfo.bankaccounts[0].label}
+                        p BIC : #{userInfo.bankaccounts[0].bic}
+                        p IBAN : #{userInfo.bankaccounts[0].iban}
+                    else
+                        p Bank : Not signed up yet.
