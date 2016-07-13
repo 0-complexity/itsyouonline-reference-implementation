@@ -32,8 +32,8 @@ So the scope will look something like this:
 ```var SCOPE = "user:name,user:email:user,user:facebook,user:address:main,user:phone:main,user:bankaccount:main,user:github"```
 
 Next we generate a random state (security reasons), we store it in our session and then we render the login page by referring to the login url.
-```
-var loginUrl = 'https://itsyou.online/v1/oauth/authorize?response_type=code&client_id=' + CLIENT_ID
+
+```var loginUrl = 'https://itsyou.online/v1/oauth/authorize?response_type=code&client_id=' + CLIENT_ID
         + '&redirect_uri=' + callBack
         + '&scope=' + SCOPE
         + '&state=' + state
@@ -42,7 +42,5 @@ var loginUrl = 'https://itsyou.online/v1/oauth/authorize?response_type=code&clie
         }
     );```
     
-    
 Next you will have to login to itsyou.online and you need to give permission as user on which information you wish to share (the information asked from the user depends on the scope).
 At this moment, the user will get a accesstoken which will be used in the following steps.
-
