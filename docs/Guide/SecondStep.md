@@ -2,7 +2,7 @@
 
 The first thing you want to look up is the client secret, this is shown when when you make a new company.
 
-![](Schermafbeelding 2016-07-12 om 15.14.57.png)
+![](../../img/1.jpg)
 
 Next you make a new file to write the code for implementing the callback. Declare a variable which holds the secret and a variable which is the callback URL.
 
