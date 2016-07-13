@@ -3,7 +3,7 @@
  */
 const CLIENT_ID = "test2";
 var callBackUrl = "http://localhost:3000/callback";
-var SCOPE = "user:name,user:email:user,user:facebook,user:address:main,user:phone:main,user:bankaccount:stealing money,user:github"
+var SCOPE = "user:name,user:email:user,user:facebook,user:address:main,user:phone:main,user:bankaccount,user:github,user:memberof:" + CLIENT_ID
 function createLoginUrl(request) {
     var state = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

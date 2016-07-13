@@ -5,7 +5,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var config = require('./config');
+var proxy = require("express-http-proxy");
 var routes = require('./routes/index');
 var user = require('./routes/user');
 var routeCallback = require('./routes/routeCallback');
@@ -25,10 +26,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: "qsdfmlkjdfklsmqjdlfksqjdfsopqijopiqfjoqdfs", resave: true, saveUninitialized: true}));
 
-
 app.use('/', routes);
 app.use('/user', user);
 app.use('/callback', routeCallback);
+app.use('/restmachine', proxy(config.G8_URL));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

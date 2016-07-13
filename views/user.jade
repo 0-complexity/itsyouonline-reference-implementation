@@ -50,9 +50,10 @@ block body
                     br
 
                     span(class="fa-bank", aria-hidden="true")
-                    if userInfo.bankaccounts.length
+                    if userInfo.bankaccounts && userInfo.bankaccounts.length
                         p Bank : #{userInfo.bankaccounts[0].label}
                         p BIC : #{userInfo.bankaccounts[0].bic}
                         p IBAN : #{userInfo.bankaccounts[0].iban}
                     else
                         p Bank : Not signed up yet.
+    iframe(id="vdc",src="../G8VDC/index.html?jwt=#{jwt}&g8_domain=#{G8_URL}")
