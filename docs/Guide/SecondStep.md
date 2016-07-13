@@ -16,7 +16,7 @@ It's important that you make a request to: [](https://itsyou.online/v1/oauth/acc
 
 when all the values are filled in correctly you will get a response with the accesstoken that will look something like this.
 
-{"access_token":"ACCESS_TOKEN","token_type":"bearer","expires_in":86400,"refresh_token":"REFRESH_TOKEN","scope":"read","info":{"username":"bob"}}
+```{"access_token":"ACCESS_TOKEN","token_type":"bearer","expires_in":86400,"refresh_token":"REFRESH_TOKEN","scope":"read","info":{"username":"bob"}}```
 
 Now the application is authorized. It may use the token to access the user's account via the service API, limited to the scope of access, until the token expires or is revoked. If a refresh token was issued, it may be used to request new access tokens if the original token has expired.
 
