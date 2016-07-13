@@ -12,7 +12,7 @@ Next you make a new file to write the code for implementing the callback. Declar
 
 Also check if the state in our session is still the same as the current state.
 
-It's important that you make a request to: 
+It's important that you make a POST request to: 
 
 https://itsyou.online/v1/oauth/access_token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL&state=STATE
 
