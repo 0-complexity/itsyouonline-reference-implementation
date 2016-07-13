@@ -8,7 +8,7 @@ First we take a look at the given Authorization code link :
 
 [https://itsyou.online/v1/oauth/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=CALLBACK_URL&scope=read&state=STATE](https://itsyou.online/v1/oauth/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=CALLBACK_URL&scope=read&state=STATE)
 
-The CLIENT_ID stands for the name of the company as which you signed up on itsyou.online.
+The CLIENT_ID stands for the name of the organization as which you signed up on itsyou.online.
 In this example we use Test2.
 
 ![](https://github.com/0-complexity/itsyouonline-reference-implementation/blob/master/img/1.png)
