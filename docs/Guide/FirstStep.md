@@ -11,7 +11,7 @@ First we take a look at the given Authorization code link :
 The CLIENT_ID stands for the name of the company as which you signed up on itsyou.online.
 In this example we use Test2.
 
-[](https://github.com/0-complexity/itsyouonline-reference-implementation/blob/master/img/2.png)
+![](https://github.com/0-complexity/itsyouonline-reference-implementation/blob/master/img/2.png)
 
 So we create a constant in our program called CLIENT_ID.
 
