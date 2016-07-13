@@ -34,6 +34,4 @@ For example, in curl you can set the Authorization header like this:
 
 ```curl -H "Authorization: token OAUTH-TOKEN"```
 
-https://itsyou.online/api/users/bob/info
-
-
+If you make a GET request to https://itsyou.online/api/users/"accessToken.info.username"/info you will get JSON data in response in which you can pull out all the data you want to use.
