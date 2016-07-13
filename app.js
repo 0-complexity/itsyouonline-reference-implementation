@@ -62,5 +62,5 @@ app.use(function (err, req, res, next) {
     });
 });
 
-
+console.log("Server ONLINE" + port);
 module.exports = app;
