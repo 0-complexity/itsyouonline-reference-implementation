@@ -43,4 +43,4 @@ Next we generate a random state (security reasons), we store it in our session a
     );```
     
 Next you will have to login to itsyou.online and you need to give permission as user on which information you wish to share (the information asked from the user depends on the scope).
-At this moment, the user will get a accesstoken which will be used in the following steps.
+At this moment, the user will get an accesstoken which will be used in the following steps.
