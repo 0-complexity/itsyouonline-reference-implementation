@@ -29,7 +29,7 @@ https://gig.gitbooks.io/itsyouonline/content/oauth2/scopes.html
 in this example we want all the information that the user has.
 So the scope will look something like this:
 
-```var SCOPE = "user:name,user:email:user,user:facebook,user:address:main,user:phone:main,user:bankaccount:fortis,user:github"```
+```var SCOPE = "user:name,user:email:user,user:facebook,user:address:main,user:phone:main,user:bankaccount:main,user:github"```
 
 Next we generate a random state (security reasons), we store it in our session and then we render the login page by referring to the login url.
 ```
