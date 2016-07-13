@@ -23,7 +23,8 @@ So again we create a variable called callBack which we set to:
 ```var callBack = "http://localhost:3000/callback";```
 
 The scope is the actual data you want to fetch from itsyou.online , take a quick look here
-[](https://gig.gitbooks.io/itsyouonline/content/oauth2/scopes.html)
+
+![](https://gig.gitbooks.io/itsyouonline/content/oauth2/scopes.html)
 
 in this example we want all the information that the user has.
 So the scope will look something like this:
