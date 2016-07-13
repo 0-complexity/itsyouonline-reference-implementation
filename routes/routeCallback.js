@@ -1,9 +1,8 @@
 /**
  * Created by Dylan on 11/07/16.
  */
-var CLIENT_ID = "test2";
-var client_secret = "V-g38-gf_h52cRHML3WZsG9Pilc09ahP4sIQfYP1mguSrwq50vd5";
-var redirect_uri = "http://localhost:3000/callback";
+
+var config = require("../config");
 var express = require('express');
 var request = require('request');
 var util = require('../util/login');
@@ -21,10 +20,10 @@ router.get('/', function (req, res) {
     //get user info
     // todo: POST request to https://itsyou.online/v1/oauth/access_token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL&state=STATEy
     var queryString = querystring.stringify({
-        client_id: CLIENT_ID,
-        client_secret: client_secret,
+        client_id: config.CLIENT_ID,
+        client_secret: config.client_secret,
         code: code,
-        redirect_uri: redirect_uri,
+        redirect_uri: config.callBackUrl,
         state: state
     });
     var url = "https://itsyou.online/v1/oauth/access_token?" + queryString;
@@ -55,12 +54,12 @@ router.get('/', function (req, res) {
                     req.session.accesToken = accesToken;
                     res.redirect('/user');
                 } else {
-                    console.error(error, response.statusCode, body)
+                    console.error("error while fetching user info", error, response.statusCode, body)
                 }
                 console.log(userInfo);
             });
         } else {
-            console.error(error, response.statusCode, body);
+            console.error('error while requesting accestoken', error, response.statusCode, body);
         }
     })
 });
