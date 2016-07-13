@@ -1,29 +1,24 @@
 var express = require('express');
 var session = require('express-session');
 var router = express.Router();
-const CLIENT_ID = "test2";
-var callBack = "http://localhost:3000/callback";
-var SCOPE = "user:name,user:email:user,user:facebook,user:address:main,user:phone:main,user:bankaccount:fortis,user:github"
 /* GET home page. */
+var util = require('../util/login');
 router.get('/', function (req, res, next) {
     // todo createRandomState
-    var state = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    console.log(req.session)
+    if (!req.session || !req.session.accessToken || req.session.accessToken.expires_in < 60) {
+        showHomePage()
+    }
+    else {
+        req.redirect('/user');
+    }
 
-    for (var i = 0; i < 20; i++)
-        state += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    // todo storeStateInSession
-    req.session.oauthState = state;
-
-    var loginUrl = 'https://itsyou.online/v1/oauth/authorize?response_type=code&client_id=' + CLIENT_ID
-        + '&redirect_uri=' + callBack
-        + '&scope=' + SCOPE
-        + '&state=' + state
-    res.render('index', {
-            loginUrl: loginUrl
-        }
-    );
+    function showHomePage() {
+        res.render('index', {
+                loginUrl: util.createLoginUrl(req)
+            }
+        );
+    }
 });
 
 module.exports = router;

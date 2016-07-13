@@ -5,9 +5,10 @@ var CLIENT_ID = "test2";
 var client_secret = "V-g38-gf_h52cRHML3WZsG9Pilc09ahP4sIQfYP1mguSrwq50vd5";
 var redirect_uri = "http://localhost:3000/callback";
 var express = require('express');
-var querystring = require('querystring');
-
+var request = require('request');
+var util = require('../util/login');
 var router = express.Router();
+var querystring = require('querystring');
 
 router.get('/', function (req, res) {
     var state = req.query.state;
@@ -18,8 +19,7 @@ router.get('/', function (req, res) {
 
     //access token ophalen
     //get user info
-    // todo: POST request to https://itsyou.online/v1/oauth/access_token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL&state=STATE
-    var request = require('request');
+    // todo: POST request to https://itsyou.online/v1/oauth/access_token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL&state=STATEy
     var queryString = querystring.stringify({
         client_id: CLIENT_ID,
         client_secret: client_secret,
@@ -31,8 +31,7 @@ router.get('/', function (req, res) {
     var params = {
         method: 'POST',
         url: url
-    };
-    console.log(params)
+    }
     request(params, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             console.log('body', body)
@@ -54,16 +53,7 @@ router.get('/', function (req, res) {
                 if (!error && response.statusCode == 200) {
                     console.log('info req', body)
                     req.session.accesToken = accesToken;
-                    if (accesToken.expires_in > 0) {
-                        res.render('user', {
-                            title: 'User info',
-                            userInfo: JSON.parse(body),
-                            accesToken: accesToken
-                        });
-                    }
-                    else {
-
-                    }
+                    res.redirect('/user');
                 } else {
                     console.error(error, response.statusCode, body)
                 }
