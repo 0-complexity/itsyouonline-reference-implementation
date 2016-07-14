@@ -14,7 +14,7 @@ Once your logged in you will need a ssh key to connect to GitHub in order to clo
 
 Here you can find more information on how to generate a SSH-key.
 
-'https://help.github.com/articles/generating-an-ssh-key/'
+https://help.github.com/articles/generating-an-ssh-key/
 
 If ```pbcopy < ~/.ssh/id_rsa.pub``` is not working you can use:
 ```cat < ~/.ssh/id_rsa.pub```
