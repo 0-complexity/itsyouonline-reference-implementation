@@ -2,7 +2,7 @@
 
 First you begin with creating a virtual machine on your cloudspace, select an operating system of your choice. Then you make a new port forward from your local port to a public port.
 
-Click on your virtual machine to see al the details, you will need the initial credentials and the IP address to connect.
+Click on your virtual machine to see all the details, you will need the initial credentials and the IP address to connect.
 
 Once your machine is running you can connect to it, open your command line on your local workingstation.
 
