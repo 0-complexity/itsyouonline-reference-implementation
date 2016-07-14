@@ -393,7 +393,7 @@
       <option name="presentableId" value="Default" />
       <updated>1468397468754</updated>
       <workItem from="1468397470434" duration="17620000" />
-      <workItem from="1468481322104" duration="936000" />
+      <workItem from="1468481322104" duration="1016000" />
     </task>
     <task id="LOCAL-00001" summary="Add vdc work in progress">
       <created>1468415135396</created>
@@ -437,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468424653027</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Setting hardcoded callback &amp; secret">
+      <created>1468483183371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1468483183371</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18556000" />
+    <option name="totallyTimeSpent" value="18636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="842" extended-state="0" />
@@ -482,7 +489,8 @@
     <MESSAGE value="Add vdc work in progress" />
     <MESSAGE value="&#10;" />
     <MESSAGE value="Edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit" />
+    <MESSAGE value="Setting hardcoded callback &amp; secret" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting hardcoded callback &amp; secret" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
