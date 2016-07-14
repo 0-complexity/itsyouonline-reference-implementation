@@ -67,8 +67,8 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="9" column="179" selection-start-line="9" selection-start-column="179" selection-end-line="9" selection-end-column="179" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -393,7 +393,7 @@
       <option name="presentableId" value="Default" />
       <updated>1468397468754</updated>
       <workItem from="1468397470434" duration="17620000" />
-      <workItem from="1468481322104" duration="1016000" />
+      <workItem from="1468481322104" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="Add vdc work in progress">
       <created>1468415135396</created>
@@ -444,11 +444,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468483183371</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Setting hardcoded callback &amp; secret">
+      <created>1468483249885</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1468483249885</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18636000" />
+    <option name="totallyTimeSpent" value="18743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="842" extended-state="0" />
@@ -683,8 +690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="9" column="179" selection-start-line="9" selection-start-column="179" selection-end-line="9" selection-end-column="179" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
