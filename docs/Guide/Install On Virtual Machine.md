@@ -6,7 +6,7 @@ Click on your virtual machine to see al the details, you will need the initial c
 
 Once your machine is running you can connect to it, open your command line on your local workingstation.
 
-```ssh login@ipOfVm -p 'your port'````
+```ssh login@ipOfVm -p 'your port'```
 
 enter your password (initials credentials)
 
