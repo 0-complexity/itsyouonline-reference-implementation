@@ -14,7 +14,7 @@ In this example we use Test2.
 
 ![](../img/1.png)
 
-So we create a constant in our program called CLIENT_ID.
+So we create a constant in our program called CLIENT_ID, you can also make this environment variables that you can export(change value) in the command line.
 
 ```java
 const CLIENT_ID = "test2";
