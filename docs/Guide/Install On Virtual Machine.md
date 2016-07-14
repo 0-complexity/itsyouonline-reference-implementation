@@ -24,11 +24,11 @@ When this is done you make a new directory in which you want to clone the projec
 
 excecute:
 
-```git clone git@github.com:0-complexity/itsyouonline-reference-implementation.git````
+```git clone git@github.com:0-complexity/itsyouonline-reference-implementation.git```
 
 Go into your root folder and excecute:
 
-```node bin/www````
+```node bin/www```
 
 The server will be running and you can navigate to it by surfing to the IP-address.
 
