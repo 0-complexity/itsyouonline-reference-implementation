@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var config = require('./config');
-var proxy = require("http");
+var proxy = require("express-http-proxy");
 var routes = require('./routes/index');
 var user = require('./routes/user');
 var routeCallback = require('./routes/routeCallback');
@@ -29,7 +29,7 @@ app.use(session({secret: "qsdfmlkjdfklsmqjdlfksqjdfsopqijopiqfjoqdfs", resave: t
 app.use('/', routes);
 app.use('/user', user);
 app.use('/callback', routeCallback);
-app.use('/restmachine' + '/' + config.G8_URL);
+app.use('/restmachine', proxy(config.G8_URL));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
