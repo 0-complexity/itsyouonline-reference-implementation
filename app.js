@@ -29,7 +29,7 @@ app.use(session({secret: "qsdfmlkjdfklsmqjdlfksqjdfsopqijopiqfjoqdfs", resave: t
 app.use('/', routes);
 app.use('/user', user);
 app.use('/callback', routeCallback);
-//app.use('/restmachine/' + config.G8_URL);
+app.use('/restmachine' + config.G8_URL);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
