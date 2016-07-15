@@ -56,4 +56,4 @@ block body
                         p IBAN : #{userInfo.bankaccounts[0].iban}
                     else
                         p Bank : Not signed up yet.
-    iframe(id="vdc",src="../G8VDC/index.html?jwt=#{jwt}&vdc_id=8&g8_domain=#{config.G8_URL}", width= "100%", style='min-height : 400px')
+    iframe(id="vdc",src="../G8VDC/index.html?jwt=#{jwt}&vdc_id=8&g8_domain=#{G8_URL}", width= "100%", style='min-height : 400px')

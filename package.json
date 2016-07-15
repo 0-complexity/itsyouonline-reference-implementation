@@ -15,6 +15,7 @@
     "jade": "~1.11.0",
     "jade-bootstrap": "^1.0.6",
     "morgan": "~1.7.0",
+    "redbird": "^0.5.2",
     "request": "^2.73.0",
     "serve-favicon": "~2.3.0"
   }
