@@ -46,7 +46,9 @@ router.get('/', function (req, res) {
                             G8_URL: config.G8_URL,
                             accesToken: accesToken
                         });
+                        console.log(jwt)
                     }
+
                     else {
                         console.error(error, response.statusCode, body)
                     }
