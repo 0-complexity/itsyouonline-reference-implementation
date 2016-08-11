@@ -33,3 +33,55 @@ Go into your root folder and excecute:
 
 The server will be running and you can navigate to it by surfing to the IP-address.
 
+## VDC control panel configuration
+
+In order te cope with the same origin policy you have to install a reverse proxy server.
+
+Nginx
+```
+sudo apt-get update
+sudo apt-get install nginx
+```
+
+Then go in the configuration file :
+`sudo vi /etc/nginx/sites-enabled/default`
+
+Insert this configuration : 
+```
+server{
+        listen 80;
+        server_name itsyouonlineimpl.com;
+
+        location / {
+                proxy_pass http://localhost:3000;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_set_header Host $http_host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forward-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forward-Proto http;
+                proxy_set_header X-Nginx-Proxy true;
+                proxy_redirect off;
+        }
+
+        location /restmachine {
+                resolver 8.8.8.8;
+                proxy_pass https://$http_x_g8_domain;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_set_header Host $http_host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forward-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forward-Proto http;
+                proxy_set_header X-Nginx-Proxy true;
+                add_header X-test $http_x_g8_domain;
+                proxy_redirect off;
+        }
+}
+```
+
+Start the nginx server and you are good to go!
+
+`sudo systemctl start nginx`

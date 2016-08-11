@@ -15,7 +15,9 @@ Also check if the state in our session is still the same as the current state.
 
 It's important that you make a POST request to: 
 
-`https://itsyou.online/v1/oauth/access_token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL&state=STATE`
+```
+https://itsyou.online/v1/oauth/access_token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL&state=STATE
+```
 
 When all the values are filled in correctly you will get a response with the accesstoken that will look something like this:
 
