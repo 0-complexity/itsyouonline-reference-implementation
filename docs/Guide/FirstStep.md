@@ -4,7 +4,7 @@ Installation details : [https://www.gitbook.com/book/gig/itsyouonline/details](h
 
 To start we create a new Node.js express app in Webstorm (or other IDE'S).
 
-First we take a look at the given Authorization code link : 
+First we take a look at the given Authorization code link :
 
 `https://itsyou.online/v1/oauth/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=CALLBACK_URL&scope=read&state=STATE`
 
@@ -21,7 +21,7 @@ const CLIENT_ID = "test2";
 ```
 
 Next the **redirect uri** is equal to the callback address you choose, in this case we are going to loopback to a localhost (address can be chosen freely).
-So again we create a variable called callBack which we set to: 
+So again we create a variable called callBack which we set to:
 
 ```java
 var callBack = "http://localhost:3000/callback";
@@ -50,6 +50,6 @@ var loginUrl = 'https://itsyou.online/v1/oauth/authorize?response_type=code&clie
         }
     );
 ```
-    
+
 Next you will have to login to ItsYou.online and you need to give permission as user on which information you wish to share (the information asked from the user depends on the scope).
-At this moment, the user will get an accesstoken which will be used in the following steps.
+At this moment, the user will get an access token which will be used in the following steps.
